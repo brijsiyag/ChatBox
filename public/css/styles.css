@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #262D31;
+    min-width: 100wh;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+.container-main{
+    display: flex;
+    flex-direction: row;
+    max-height: 100vh;
+}
+.sidebar{
+    width: 29.86%;
+    color: white;
+    height: 100vh;
+    background-color: #131C20;
+    position:relative;
+    transition: ease 0.4s;
+}
+.sidebarUpper{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2A2F32;
+    border-right: 2px solid rgb(15, 15, 15);
+}
+.sidebarUpper img{
+    width: 3rem;
+    display: inline;
+    margin: 0 0px 0 15px;
+}
+.sidebarUpper h1{
+    font-size: 2rem;
+    color: white;
+    width: fit-content;
+    margin: 10px 20px ;
+}
+.sidebarLower{
+    font-size: 2.5rem;
+    text-align: center;
+    overflow:auto;
+    max-height: 90vh;
+}
+
+.usersInSidebar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: rgb(75, 75, 75) 1px solid;
+    width: inherit;
+    padding-left: 10px;
+    text-align: left;
+    /* background-color: rgba(112, 128, 144, 0.432); */
+    font-size: 1.5rem;
+    height: 76px;
+}
+.usersInSidebar:hover{
+    background-color: #323739;
+    cursor: pointer;
+}
+.usersInSidebar h2{
+    margin-left: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+.usersInSidebar img{
+    height: 80%;
+}
+.selectedUser{
+    background-color: #313536;
+}
+
+.dropdown-menu{
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    min-height: 100%;
+    flex: 1 1 auto;
+    /* width: 70%; */
+}
+
+
+.message-container{
+    width: 100%;
+    max-height: 100%;
+    flex: 1 1 auto;
+    overflow: auto;
+    margin: auto 0;
+    background-color: #121A1E;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-radius: 5px 5px 0 0;
+}
+.message-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.message-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.main-msg{
+    max-width: 70%;
+    min-width: 5%;
+    width: fit-content;
+    border-radius: 8px;
+    margin: 5px 5%;
+    padding: 6px 7px 8px 9px;
+}
+
+.left{
+    float: left;
+    clear: both;
+    background-color: #262D31;
+}
+.right{
+    float: right;
+    clear: both;
+    background-color: #056162;
+}
+.user-name{
+    font-size: 1.5rem;
+    color: rgb(0, 255, 213);
+    border-radius: 8px 8px 0 0;
+}
+
+.msg{
+    font-size: 1.5rem;
+    color: #ffffff;
+    /* padding: 0px 10px 3px 10px; */
+    word-wrap: break-word;
+    overflow: auto;
+    margin: 2px;
+}
+
+.time{
+    font-size: 0.8rem;
+    color: rgb(187, 187, 187);
+    padding-left: 5px;
+}
+
+.messageInp{
+    margin: 10px;
+    font-size: 2rem;
+    width: 97%;
+    border-radius: 20px;
+    outline: none;
+    background-color: #696767;
+    border: none;
+    padding: 5px 20px;
+}
+.form{
+    flex: 0 1 auto;
+    /* position: absolute; */
+    /* bottom: 0; */
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    margin: 0 0;
+    background-color: #2a2e31;
+    display: flex;
+    align-items: center;
+}
+
+.sendBtn{
+    width: 60px;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    height: fit-content;
+}
+
+.send-img{
+    width: 40px;
+}
+
+.send-img:hover{
+    cursor: pointer;
+    width: 60px;
+}
+
+.joined{
+    width: fit-content;
+    margin: 5px auto;
+    font-size: 1rem;
+    background-color: rgb(101, 109, 109);
+    border-radius: 5px;
+    padding: 5px;
+    clear: both;
+    color: white;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    background-color: #2A2F32;
+}
+
+.user-name-heading{
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    width: fit-content;
+    margin: 10px 20px ;
+}
+
+.user-img{
+    width: 3rem;
+    display: inline;
+    margin: 0 0px 0 15px;
+}
+
+.count{
+    font-size: 2rem;
+    color: white;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+@media (max-width:1400px) {
+    .count{
+        font-size: 1rem;
+    }
+    .user-img{
+        width: 2rem;
+    }
+    .user-name-heading{
+        font-size: 1.5rem;
+    }
+    .messageInp{
+        font-size: 1.5rem;
+    }
+    .container{
+        max-height: 92vh;
+        min-height: 92vh;
+    }
+    .joined{
+        font-size: 0.6rem;
+    }
+    .msg{
+        font-size: 1rem;
+    }
+    .user-name{
+        font-size: 1rem;
+    }
+}
