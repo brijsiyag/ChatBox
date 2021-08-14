@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect("mongodb+srv://birju:9351@chu-cha.gorz9.mongodb.net/chu-cha?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect("mongodb+srv://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@chu-cha.gorz9.mongodb.net/chu-cha?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
 // mongoose.connect("mongodb://localhost:27017/abcd", { useUnifiedTopology: true, useNewUrlParser: true })
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
